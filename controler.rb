@@ -20,10 +20,19 @@ class Controler
   end
 
   def list_task
-
+    # 1 ask for all tasks
+    tasks = @repository.all
+    # 2 ask the view to return the task
+    @view.list_task(tasks)
   end
 
   def mark_task_as_completed
+    # 1 ask the user for the index of completed task
+    index = @view.get_task_index
+    # 2 ask the repo to retirve the element to give index
+    task = @repository.find(index)
+    # 3 mark the task as completed
+    task.mark_task_as_completed
 
   end
 end
