@@ -8,7 +8,8 @@ class View
 
   def list_task(task)
     task.each_with_index do |task , index|
-      puts "#{index + 1}: #{task.title}"
+      x = task.completed? ? "x" : " "
+      puts "#{index + 1}: [#{x}] #{task.title} "
     end
   end
 
