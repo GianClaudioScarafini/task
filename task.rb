@@ -10,6 +10,6 @@ class Task
   end
 
   def completed?
-     @completed
+    @completed
   end
 end
